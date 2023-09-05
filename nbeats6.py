@@ -86,6 +86,9 @@ if input_data_str:
         plt.figure(figsize=(5,2.5))
         plt.plot(df.y[:7])
         plt.plot(df.y[-2:],linestyle='--',label=f'N-BEATS Forecast : ${tf.squeeze(tf.round(forecast,4))}')
+        plt.xticks(fontsize=9)
+        plt.yticks(fontsize=9)
+        plt.ylabel('Exchange Rate',fontsize=9)
         plt.legend(loc='best',fontsize=9);
         st.pyplot(plt)
 
