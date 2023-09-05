@@ -73,7 +73,7 @@ if input_data_str:
         
 
         # Display the forecasted value
-        "{:.4f}".format(number)
+        
         st.write(f"Forecast: ${round(tf.squeeze(forecast),4)}")
         
         input_data.append(tf.squeeze(forecast))
