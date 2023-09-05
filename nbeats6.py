@@ -73,9 +73,9 @@ if input_data_str:
         
 
         # Display the forecasted value
-        st.write(f"Forecast: ${forecast}")
+        st.write(f"Forecast: ${tf.squeeze(forecast)}")
         
-        input_data.append(np.squeeze(forecast))
+        input_data.append(tf.squeeze(forecast))
         
         X=[-6,-5,-4,-3,-2,-1,0,1]
         
@@ -85,7 +85,7 @@ if input_data_str:
         plt.style.use('dark_background')
         plt.figure(figsize=(5,2.5))
         plt.plot(df.y[:7])
-        plt.plot(df.y[-2:],linestyle='--',label=f'N-BEATS Forecast : ${np.squeeze(forecast)}')
+        plt.plot(df.y[-2:],linestyle='--',label=f'N-BEATS Forecast : ${tf.squeeze(tf.round(forecast,4))}')
         plt.legend(loc='best',fontsize=9);
         st.pyplot(plt)
 
