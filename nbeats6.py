@@ -91,34 +91,3 @@ if input_data_str:
 
     else:
         st.write("Please enter exactly 7 data points separated by spaces.")
-
-
-
-
-
-
-# In[22]:
-
-
-# predict = nbeats_model.predict([[1,2,5,6,7,2,3]])
-
-
-# In[23]:
-
-
-# X=[-6,-5,-4,-3,-2,-1,0,1]
-# forecast=[5]
-# y = [1,13,4,5,6,7,9,np.squeeze(forecast)]
-# df=pd.DataFrame({'X':X ,"y":y})
-# plt.style.use('dark_background')
-# plt.figure(figsize=(5,2.5))
-# plt.plot(df.y[:7])
-# plt.plot(df.y[-2:],linestyle='--',label=f'NBeats Forecast : {np.squeeze(forecast)}')
-# plt.legend(loc='best');
-
-
-# In[ ]:
-
-
-
-
