@@ -73,7 +73,7 @@ if input_data_str:
         
 
         # Display the forecasted value
-        st.write(f"Forecast: ${forecast})
+        st.write(f"Forecast: ${forecast}")
         
         input_data.append(np.squeeze(forecast))
         
