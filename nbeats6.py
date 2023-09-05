@@ -83,15 +83,15 @@ if input_data_str:
         forecast=np.squeeze(forecast)
         y = input_data
         df= pd.DataFrame({'X':X ,"y":y})
-        plt.style.use('dark_background')
+        plt.style.use('#272323')
         plt.figure(figsize=(5,2.5))
         plt.plot(df.y[:7],color='magenta',linewidth=0.7)
         plt.plot(df.y[-2:],linestyle='--',linewidth=0.7,label=f'N-BEATS Forecast : ${tf.squeeze(forecast):.4f}')
-        plt.xticks(fontsize=9)
-        plt.yticks(fontsize=9)
+        plt.xticks(fontsize=7.5)
+        plt.yticks(fontsize=7.5)
         plt.grid(color='grey')
-        plt.ylabel('Exchange Rate',fontsize=9)
-        plt.legend(loc='best',fontsize=9);
+        plt.ylabel('Exchange Rate',fontsize=7.5)
+        plt.legend(loc='best',fontsize=8);
         st.pyplot(plt)
 
     else:
