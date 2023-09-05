@@ -1,7 +1,5 @@
 matplotlib
 numpy
 pandas
-scikit_learn
 streamlit
 tensorflow
-tensorflow_probability
