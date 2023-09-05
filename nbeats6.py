@@ -90,7 +90,7 @@ if input_data_str:
         plt.yticks(fontsize=9)
         plt.grid(color='grey')
         plt.ylabel('Exchange Rate',fontsize=9)
-        plt.legend(loc='best',fontsize=9);
+        plt.legend(loc='best',fontsize=9,color='pink');
         st.pyplot(plt)
 
     else:
