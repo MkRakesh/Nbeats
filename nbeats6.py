@@ -73,7 +73,7 @@ if input_data_str:
         
 
         # Display the forecasted value
-        st.write("Forecast:", forecast)
+        st.write(f"Forecast: ${forecast})
         
         input_data.append(np.squeeze(forecast))
         
@@ -85,9 +85,9 @@ if input_data_str:
         plt.style.use('dark_background')
         plt.figure(figsize=(5,2.5))
         plt.plot(df.y[:7])
-        plt.plot(df.y[-2:],linestyle='--',label=f'NBeats Forecast : {np.squeeze(forecast)}')
-        plt.legend(loc='best');
+        plt.plot(df.y[-2:],linestyle='--',label=f'N-BEATS Forecast : ${np.squeeze(forecast)}')
+        plt.legend(loc='best',fontsize=9);
         st.pyplot(plt)
 
     else:
-        st.write("Please enter exactly 7 data points separated by spaces.")
+        st.write("Please enter exactly 7 values separated by spaces.")
