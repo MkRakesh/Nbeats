@@ -9,7 +9,7 @@ import tensorflow as tf
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-# import os
+import os
 #Create NBeatsBlock custom layer
 import tensorflow as tf
 class NBeatsBlock(tf.keras.layers.Layer):
@@ -43,12 +43,12 @@ class NBeatsBlock(tf.keras.layers.Layer):
 
 
 # In[31]:
-# import subprocess
-# if not os.path.isfile('NBeats.h5'):
-#     subprocess.run(['curl --output NBeats.h5 https://raw.githubusercontent.com/MkRakesh/nbeats/main/NBeats.h5"'], shell=True)
-# nbeats_model = tf.keras.models.load_model('NBeats.h5',custom_objects={'NBeatsBlock': NBeatsBlock})
-# Load the saved model
+import subprocess
+if not os.path.isfile('NBeats.h5'):
+    subprocess.run(['curl --output NBeats.h5 https://raw.githubusercontent.com/MkRakesh/nbeats/main/NBeats.h5"'], shell=True)
 nbeats_model = tf.keras.models.load_model('NBeats.h5',custom_objects={'NBeatsBlock': NBeatsBlock})
+# Load the saved model
+# nbeats_model = tf.keras.models.load_model('NBeats.h5',custom_objects={'NBeatsBlock': NBeatsBlock})
 
 # Customize Streamlit app appearance
 # Title
