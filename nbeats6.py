@@ -44,7 +44,7 @@ class NBeatsBlock(tf.keras.layers.Layer):
 
 # In[31]:
 import subprocess
-if not os.path.isfile('model.h5'):
+if not os.path.isfile('NBeats.h5'):
     subprocess.run(['curl --output model.h5 https://raw.githubusercontent.com/MkRakesh/nbeats/main/NBeats.h5"'], shell=True)
 nbeats_model = tf.keras.models.load_model('model.h5',custom_objects={'NBeatsBlock': NBeatsBlock})
 # Load the saved model
