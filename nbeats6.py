@@ -43,10 +43,12 @@ class NBeatsBlock(tf.keras.layers.Layer):
 
 
 # In[31]:
-
-
+import subprocess
+if not os.path.isfile('model.h5'):
+    subprocess.run(['curl --output model.h5 "https://media.githubusercontent.com/media/MkRakesh/nbeats/main/NBeats.h5"'], shell=True)
+nbeats_model = tf.keras.models.load_model('model.h5',custom_objects={'NBeatsBlock': NBeatsBlock})
 # Load the saved model
-nbeats_model = tf.keras.models.load_model('NBeats.h5',custom_objects={'NBeatsBlock': NBeatsBlock})
+# nbeats_model = tf.keras.models.load_model('NBeats.h5',custom_objects={'NBeatsBlock': NBeatsBlock})
 
 # Customize Streamlit app appearance
 # Title
